@@ -1,0 +1,11 @@
+body{
+  background-color: inherit;
+  text-align: justify;
+}
+nav{
+  text-decoration: inherit;
+  padding:2px;
+  font-size: 12px;
+  font-style: normal;
+  font-family: "Lucida" Grande, sans-serif;
+}
