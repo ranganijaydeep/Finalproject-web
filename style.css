@@ -35,7 +35,8 @@ body{
   margin-bottom: 20px;
 }
 .mainarea img{
-  
+  border: 2px;
+  border-color: black;
 }
 
 .footer {
