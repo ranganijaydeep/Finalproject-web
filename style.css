@@ -80,3 +80,6 @@ body{
   text-align: center;
   margin-bottom: 30px;
 }
+.footer button{
+  float:right;
+}
