@@ -1,7 +1,7 @@
-body{
+body{ //this is for whole body
   background-color: #D2691E;
 }
-.header{
+.header{ // this is only for all header part
   overflow: hidden;
   border-radius: 4px;
   background-color: #f1f1f1;
