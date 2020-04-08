@@ -1,20 +1,25 @@
-body{ //this is for whole body
-  background-color: #D2691E;
+body{
+  background-color: #FFFFFF;
 }
-.header{ // this is only for all header part
+.header{
   overflow: hidden;
   border-radius: 4px;
-  background-color: #f1f1f1;
+  background-color: #FFFFFF;
   margin-top:10px;
   margin-bottom:10px;
 }
 .header a img {
-  border: 1px solid #ddd;
+  border: 1px solid #FFFFFF;
   border-radius: 4px;
   width: 60px;
   padding-left: 5px;
   padding-right: 2px;
 }
+.loginsignin{
+  float:right;
+  Color:red;
+}
+
 .header a {
   float:left;
   font-size: 40px;
@@ -55,9 +60,17 @@ body{ //this is for whole body
   border-color: black;
   border-width: thick;
 }
+.mtopimg img{
+  align-items :center;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+}
+.mainarea h1{
+  text-align: center;
+}
+
 .mainarea img{
   align-items :center;
-  width: 350px;
   border: 1px solid #ddd;
 }
 
