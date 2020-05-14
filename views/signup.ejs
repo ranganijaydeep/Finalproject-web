@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Crew </title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!---Header start
+    <div class="header">
+        <img src="logos/mealcrewclearzip.png" alt="LOGO"/>
+      </div>
+      Header finish --->
+
+    <!--- navigation start---->
+    <div class="navbar">
+        <img src="/logos/mealcrewclearzip.png" alt="LOGO" />
+        <a href="index.html">Home</a>
+        <a href="/recipe">Latest recipe</a>
+        <div class="dropdown">
+            <button class="dropbtn">Categories
+                <i class="fa fa-caret-down"></i>
+              </button>
+            <div class="dropdown-content">
+                <a href="#">Chinese</a>
+                <a href="#">Italian</a>
+                <a href="#">Indian</a>
+                <a href="#">Korian</a>
+                <a href="#">Brazilian</a>
+                <a href="#">Venezuala</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Planns
+                    <i class="fa fa-caret-down"></i>
+                 </button>
+            <div class="dropdown-content">
+                <a href="#">Breakfast</a>
+                <a href="#">Lunch</a>
+                <a href="#">Dinner</a>
+                <a href="#">Desserts</a>
+                <a href="#">Starters</a>
+                <a href="#">Free Time Drinks</a>
+            </div>
+        </div>
+        <a class="navsp" href="/crewMembers">Settings </a>
+
+
+
+        <div class="loginbtn">
+            <a href="/views/signup.ejs">LOGIN</a>
+        </div>
+
+    </div>
+    <!---Navigation Finish--->
+
+    <!---Internal Content  start--->
+    <div class="mainarea">
+        <div class="signup_top_text">
+            <h3>Save Your Favourite reipes, Shopping list & Find where to buy Ingrediance.</h3>
+        </div>
+        <div class=div_main_form>
+            <form id="myForm">
+                <label for="fname">First Name</label><br/>
+                <input type="text" name="usrname" placeholder="Enter Firstname "><br/>
+                <label for="lname">Last Name</label><br/>
+                <input type="text" name="usrname" placeholder="Enter Lastname "><br/>
+                <label for="e_mail">Email Address</label><br/>
+                <input type="text" name="usrname" placeholder="Enter Email"><br/>
+                <label for="p_word">Passsword</label><br/>
+                <input type="password" name="pswd" placeholder="Enter password"><br/>
+                <button type="submit" class="waves-effect waves-light btn">Sign Up</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("myForm").onsubmit = (e) => {
+            e.preventDefault();
+            const url = "http://localhost:5000/crewMembers";
+            var data = new URLSearchParams();
+            for (const pair of new FormData(e.target)) {
+                // console.log(pair)
+                data.append(pair[0], pair[1])
+            }
+            fetch(url, {
+                    method: "post",
+                    body: data,
+
+                }).then(res => res.json())
+                .then(res2 => {
+                    console.log(res2)
+                    location.reload()
+                });
+        }
+    </script>
+
+
+    </div>
+
+
+    <!---Internal Content  Finish--->
+
+    <!---Footer start--->
+    <div class="footer">
+        <ul>
+            <li><a href="about.php">About Us</a></li>
+            <li> <a href="recentlyupdated.php">Daily Update</a></li>
+            <li><a href="Seasonal.php">Our Goal</a></li>
+            <li><a href="Seasonal.php">References</a></li>
+        </ul>
+
+        <ul>
+            <li> <a href="about.php">About Us</a></li>
+            <li> <a href="about.php">About Us</a></li>
+            <li> <a href="about.php">About Us</a></li>
+            <li> <a href="about.php">About Us</a></li>
+        </ul>
+
+        <div class="copyright">
+            <p>&copy; 2019-2020 MealCreaw</p>
+        </div>
+    </div>
+    <!---Footer Finish--->
+
+
+</body>
+
+</html>
