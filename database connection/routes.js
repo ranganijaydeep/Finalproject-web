@@ -15,7 +15,8 @@ var data = [];
 
 
 //mongo connect 
-mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () =>
+mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true },
+    () =>
     console.log('connectd DB!')
 );
 
@@ -27,9 +28,13 @@ module.exports = (app) => {
         res.render('index')
     })
 
-    app.get('/receipe', (req, res) => {
-        res.send('this is receipe page.')
+    app.get('/recipe', (req, res) => {
+        res.render('recipe')
     })
+    app.get('/signup', (req, res) => {
+        res.render('signup')
+    })
+
 
     app.post('/crewMembers', (req, res) => {
         const fill = new User({

@@ -123,6 +123,55 @@ body {
     border-width: thick;
 }
 
+.div_main_form {
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    background-color: #c3c388;
+}
+
+.div_main_form input {
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.div_main_form input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.signup_top_text h3 {
+    text-align: center;
+    color: white;
+    background-color: purple;
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 4px;
+}
+
+.div_main_form button {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+    background-color: blueviolet;
+}
+
 .mtopimg img {
     width: 100%;
     height: 600px;

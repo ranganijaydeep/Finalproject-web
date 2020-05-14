@@ -22,10 +22,6 @@ const routes = require('./routes')(app);
 
 app.set('view engine', 'ejs')
 
-
-
-
-
 //listening port 
 
 app.listen(port, () => {

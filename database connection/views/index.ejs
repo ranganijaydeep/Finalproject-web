@@ -18,12 +18,11 @@
     <!--- navigation start---->
     <div class="navbar">
         <img src="/logos/mealcrewclearzip.png" alt="LOGO" />
-        <a href="index.html">Home</a>
-        <a href="src/Latest.html">Latest receipe</a>
+        <a href="/">Home</a>
+        <a href="/recipe">Latest receipe</a>
         <div class="dropdown">
             <button class="dropbtn">Categories
-                <i class="fa fa-caret-down"></i>
-              </button>
+                <i class="fa fa-caret-down"></i></button>
             <div class="dropdown-content">
                 <a href="#">Chinese</a>
                 <a href="#">Italian</a>
@@ -46,17 +45,15 @@
                 <a href="#">Free Time Drinks</a>
             </div>
         </div>
-        <a class="navsp" href="Prefrences.php">Settings </a>
+        <a class="navsp" href="/crewMembers">Settings </a>
 
 
 
         <div class="loginbtn">
-            <a href="src/login.php">LOGIN</a>
+            <a href="login">LOGIN</a>
+            <a href="/signup">LOGIN</a>
+
         </div>
-
-
-
-
 
     </div>
     <!---Navigation Finish--->
@@ -78,13 +75,7 @@
                 <img src="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--513754_11.jpg?itok=DMu_wROH" alt="foodimg" />
             </div>
 
-            <div>
-                <form id="myForm">
-                    <input type="text" name="usrname">
-                    <input type="text" name="pswd">
-                    <button type="submit" class="waves-effect waves-light btn">add</button>
-                </form>
-            </div>
+
         </center>
         <script>
             document.getElementById("myForm").onsubmit = (e) => {

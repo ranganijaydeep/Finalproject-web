@@ -19,7 +19,7 @@
     <div class="navbar">
         <img src="/logos/mealcrewclearzip.png" alt="LOGO" />
         <a href="index.html">Home</a>
-        <a href="src/Latest.html">Latest receipe</a>
+        <a href="/recipe">Latest recipe</a>
         <div class="dropdown">
             <button class="dropbtn">Categories
                 <i class="fa fa-caret-down"></i>
@@ -46,7 +46,7 @@
                 <a href="#">Free Time Drinks</a>
             </div>
         </div>
-        <a class="navsp" href="Prefrences.php">Settings </a>
+        <a class="navsp" href="/crewMembers">Settings </a>
 
 
 
@@ -54,21 +54,28 @@
             <a href="/views/signup.ejs">LOGIN</a>
         </div>
 
-
-
-
-
     </div>
     <!---Navigation Finish--->
 
     <!---Internal Content  start--->
     <div class="mainarea">
+        <div class="signup_top_text">
+            <h3>Save Your Favourite reipes, Shopping list & Find where to buy Ingrediance.</h3>
+        </div>
+        <div class=div_main_form>
+            <form id="myForm">
+                <label for="fname">First Name</label><br/>
+                <input type="text" name="usrname" placeholder="Enter Firstname "><br/>
+                <label for="lname">Last Name</label><br/>
+                <input type="text" name="usrname" placeholder="Enter Lastname "><br/>
+                <label for="e_mail">Email Address</label><br/>
+                <input type="text" name="usrname" placeholder="Enter Email"><br/>
+                <label for="p_word">Passsword</label><br/>
+                <input type="password" name="pswd" placeholder="Enter password"><br/>
+                <button type="submit" class="waves-effect waves-light btn">Sign Up</button>
+            </form>
+        </div>
 
-        <form id="myForm">
-            <input type="text" name="usrname">
-            <input type="text" name="pswd">
-            <button type="submit" class="waves-effect waves-light btn">add</button>
-        </form>
     </div>
 
     <script>
