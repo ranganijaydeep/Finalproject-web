@@ -22,8 +22,11 @@
         <a href="/latest_recipe">Latest recipe</a>
         <div class="dropdown">
             <button class="dropbtn">Categories
-                <i class="fa fa-caret-down"></i></button>
+                <i class="fa fa-caret-down"></i>
+              </button>
             <div class="dropdown-content">
+                <a href="#">Chinese</a>
+                <a href="#">Italian</a>
                 <a href="#">Indian</a>
                 <a href="#">Korian</a>
                 <a href="#">Brazilian</a>
@@ -32,16 +35,14 @@
         </div>
         <!--        Search bar        -->
         <!-- Search form -->
-        <div class="search_bar">
+        <div class="md-form mt-0">
             <input class="form-control" type="text" placeholder="Search" aria-label="Search">
         </div>
 
 
 
         <div class="loginbtn">
-            <a href="/login">LOGIN</a>
-            <a href="/signup">SIGN UP</a>
-
+            <a href="/views/signup.ejs">LOGIN</a>
         </div>
 
     </div>
@@ -49,37 +50,47 @@
 
     <!---Internal Content  start--->
     <div class="mainarea">
-        <h1>Receipe Gallery</h1>
-        <script>
-            document.getElementById("myForm").onsubmit = (e) => {
-                e.preventDefault();
-                const url = "http://localhost:5000/crewMembers";
-                var data = new URLSearchParams();
-                for (const pair of new FormData(e.target)) {
-                    // console.log(pair)
-                    data.append(pair[0], pair[1])
-                }
-                fetch(url, {
-                        method: "post",
-                        body: data,
+        <div class="signup_top_text">
+            <h3>LOGIN</h3>
+        </div>
+        <div class=div_main_form>
+            <form id="myForm">
 
-                    }).then(res => res.json())
-                    .then(res2 => {
-                        console.log(res2)
-                        location.reload()
-                    });
+                <label for="e_mail">Email Address</label><br/>
+                <input type="text" name="e_mail" placeholder="Enter Email"><br/>
+                <label for="p_word">Passsword</label><br/>
+                <input type="password" name="p_assword" placeholder="Enter password"><br/>
+                <button type="submit" class="waves-effect waves-light btn">Sign Up</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("myloginForm").onsubmit = (e) => {
+            e.preventDefault();
+            const url = "http://localhost:5000/users";
+            var data = new URLSearchParams();
+            for (const pair of new FormData(e.target)) {
+                // console.log(pair)
+                data.append(pair[0], pair[1])
             }
-        </script>
+            fetch(url, {
+                    method: "get",
+                    body: data,
+
+                }).then(res => res.json())
+                .then(res2 => {
+                    console.log(res2)
+                    location.reload()
+                });
+        }
+    </script>
 
 
     </div>
 
-    <div class="maps">
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d76247.92037117376!2d-6.275100177983005!3d53.329873976305656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgrocery%20stores%20near%20me!5e0!3m2!1sen!2sie!4v1587250518310!5m2!1sen!2sie"
-            width="100%" height="450" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
-
-    </div>
     <!---Internal Content  Finish--->
 
     <!---Footer start--->
