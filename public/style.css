@@ -74,7 +74,7 @@ body {
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: #67C2C6;
 }
 
 .dropdown-content {
@@ -136,6 +136,16 @@ body {
     border-radius: 4px;
     padding: 5px;
     margin-top: 20px;
+}
+
+.all_recipe_items {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+    margin: 20px;
+    padding: 20px;
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .div_main_form input[type=text],
@@ -203,7 +213,7 @@ input[type=password] {
 
 .footer {
     background-color: #333;
-    padding: 60px;
+    padding: 10px;
 }
 
 .footer ul {
@@ -220,6 +230,13 @@ input[type=password] {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
+}
+
+.copyright img {
+    width: 120px;
+    height: 80px;
+    padding: 0;
+    margin: 0;
 }
 
 .copyright p {

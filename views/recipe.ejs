@@ -18,81 +18,42 @@
     <!--- navigation start---->
     <div class="navbar">
         <img src="/logos/mealcrewclearzip.png" alt="LOGO" />
-        <a href="index.html">Home</a>
-        <a href="/recipe">Latest recipe</a>
+        <a href="/">Home</a>
+        <a href="/latest_recipe">Latest recipe</a>
         <div class="dropdown">
             <button class="dropbtn">Categories
                 <i class="fa fa-caret-down"></i>
               </button>
             <div class="dropdown-content">
-                <a href="#">Chinese</a>
-                <a href="#">Italian</a>
                 <a href="#">Indian</a>
                 <a href="#">Korian</a>
                 <a href="#">Brazilian</a>
                 <a href="#">Venezuala</a>
             </div>
         </div>
-        <div class="dropdown">
-            <button class="dropbtn">Planns
-                    <i class="fa fa-caret-down"></i>
-                 </button>
-            <div class="dropdown-content">
-                <a href="#">Breakfast</a>
-                <a href="#">Lunch</a>
-                <a href="#">Dinner</a>
-                <a href="#">Desserts</a>
-                <a href="#">Starters</a>
-                <a href="#">Free Time Drinks</a>
-            </div>
-        </div>
-        <a class="navsp" href="/crewMembers">Settings </a>
-
-
+        <!--        Search bar        -->
+        <!-- Search form -->
 
         <div class="loginbtn">
-            <a href="/views/signup.ejs">LOGIN</a>
+            <a href="login">LOGIN</a>
         </div>
-
-
-
-
 
     </div>
     <!---Navigation Finish--->
 
     <!---Internal Content  start--->
     <div class="mainarea">
+        <div id="app"></div>
 
-        <form id="myForm">
-            <input type="text" name="usrname">
-            <input type="text" name="pswd">
-            <button type="submit" class="waves-effect waves-light btn">add</button>
+        <form id="recipe_form">
+            <label for="R_title">RECIPE TITLE</label><br/>
+
         </form>
     </div>
-
-    <script>
-        document.getElementById("myForm").onsubmit = (e) => {
-            e.preventDefault();
-            const url = "http://localhost:5000/crewMembers";
-            var data = new URLSearchParams();
-            for (const pair of new FormData(e.target)) {
-                // console.log(pair)
-                data.append(pair[0], pair[1])
-            }
-            fetch(url, {
-                    method: "post",
-                    body: data,
-
-                }).then(res => res.json())
-                .then(res2 => {
-                    console.log(res2)
-                    location.reload()
-                });
-        }
-    </script>
-
-
+    <div class="page_all">
+        <h1>ALL Recipe </h1>
+        <div id="app"></div>
+    </div>
     </div>
 
 
@@ -100,27 +61,66 @@
 
     <!---Footer start--->
     <div class="footer">
-        <ul>
-            <li><a href="about.php">About Us</a></li>
-            <li> <a href="recentlyupdated.php">Daily Update</a></li>
-            <li><a href="Seasonal.php">Our Goal</a></li>
-            <li><a href="Seasonal.php">References</a></li>
-        </ul>
-
-        <ul>
-            <li> <a href="about.php">About Us</a></li>
-            <li> <a href="about.php">About Us</a></li>
-            <li> <a href="about.php">About Us</a></li>
-            <li> <a href="about.php">About Us</a></li>
-        </ul>
 
         <div class="copyright">
-            <p>&copy; 2019-2020 MealCreaw</p>
+            <center><img src="../logos/mealcrewclearzip.png" alt="mealcrewlogo" />
+                <p>&copy; 2019-2020 MealCreaw</p>
+            </center>
+
         </div>
     </div>
     <!---Footer Finish--->
 
 
 </body>
+<script>
+    function fetchData() {
+        const fact_url = 'http://localhost:5000/recipe';
+        fetch(fact_url).then(response => {
+                console.log(response);
+                if (!response.ok) {
+                    throw Error("Error");
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                var x;
+                const html = data.map(facts => {
+                        x = facts.ingredients.toString();
+                        return `
+                    <div class="all_recipe_items">
+                            
+                    <div class ="_recipe_title">
+                            <H3>Title :${facts.title} </h3> 
+                                <H3>${facts.cuisine}</H3>
+                    </div>
+					      <div class="ingd_1">  
+				        	<h3>Ingredients:</h3>
+                            <p>${x}</p>
+                            </div>
+                    <div class="prep_1">
+                            <h3>Instructions :</h3> 
+                            <p>${facts.instructions}</p>
+                    </div>
+
+					<a href="${facts.URL}">${facts.URL}</a>
+                    
+                     </p>
+                    </div> `;
+
+                    })
+                    .join("");
+                console.log(html);
+                document.querySelector("#app").insertAdjacentHTML("beforeend", html);
+
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
+    fetchData();
+</script>
 
 </html>
