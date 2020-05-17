@@ -1,19 +1,28 @@
 {
-    "name": "database-connection",
-    "version": "1.0.0",
-    "description": "meal crew",
-    "main": "app.js",
-    "scripts": {
-        "start": "nodemon app.js"
-    },
-    "author": "Jaydeep Rangani",
-    "license": "ISC",
-    "dependencies": {
-        "cors": "^2.8.5",
-        "dotenv": "^8.2.0",
-        "ejs": "^3.1.2",
-        "express": "^4.17.1",
-        "git": "^0.1.5",
-        "mongoose": "^5.9.13"
-    }
+  "name": "database-connection",
+  "version": "1.0.0",
+  "description": "meal crew",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Jaydeep Rangani",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "git": "^0.1.5",
+    "mongoose": "^5.9.13"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranganijaydeep/Finalproject-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ranganijaydeep/Finalproject-web/issues"
+  },
+  "homepage": "https://github.com/ranganijaydeep/Finalproject-web#readme"
 }
