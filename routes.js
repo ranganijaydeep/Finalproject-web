@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors')
 require('dotenv/config');
 const User = require("./models/crew");
-const recipe = require('./models/recipes')
+const Mrecipe = require('./models/recipes')
 
 //mongo connect 
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true },
@@ -33,7 +33,7 @@ module.exports = (app) => {
     })
     app.get('/recipe', async(req, res) => {
         try {
-            const rcps = await recipe.find();
+            const rcps = await Mrecipe.find();
             res.json(rcps);
 
 
@@ -43,6 +43,18 @@ module.exports = (app) => {
         }
 
     })
+    app.get('/:postId', async(req, res) => {
+
+        try {
+            const findme = await Mrecipe.findById(req.params.postid);
+            res.json(findme);
+        } catch (error) {
+            res.json({ message: error });
+        }
+    })
+
+
+
     app.post('/recipes', (req, res) => {
         const fill = new recipe({
             title: req.body.title,

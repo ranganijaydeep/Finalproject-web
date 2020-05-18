@@ -19,8 +19,6 @@
                 <i class="fa fa-caret-down"></i>
               </button>
             <div class="dropdown-content">
-                <a href="#">Chinese</a>
-                <a href="#">Italian</a>
                 <a href="#">Indian</a>
                 <a href="#">Korian</a>
                 <a href="#">Brazilian</a>
@@ -28,7 +26,7 @@
             </div>
         </div>
         <div class="loginbtn">
-            <a href="/views/signup.ejs">LOGIN</a>
+            <a href="login">LOGIN</a>
         </div>
 
     </div>
@@ -61,7 +59,7 @@
     <script>
         document.getElementById("myForm").onsubmit = (e) => {
             e.preventDefault();
-            const url = "http://localhost:5000/crewMembers";
+            const url = "https://mealcrew.herokuapp.com/crewMembers";
             var data = new URLSearchParams();
             for (const pair of new FormData(e.target)) {
                 // console.log(pair)
@@ -80,7 +78,7 @@
     </script>
 
 
-    </div>
+
 
 
     <!---Internal Content  Finish--->
