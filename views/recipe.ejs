@@ -75,7 +75,7 @@
 </body>
 <script>
     function fetchData() {
-        const fact_url = 'http://localhost:5000/recipe';
+        const fact_url = 'https://mealcrew.herokuapp.com/recipe';
         fetch(fact_url).then(response => {
                 console.log(response);
                 if (!response.ok) {
