@@ -1,6 +1,6 @@
 body {
     background-color: #FFFFFF;
-    font-family: sans-serif, serif, ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .header {
@@ -47,9 +47,10 @@ body {
     border-radius: 4px;
     width: 240px;
     height: 50px;
+    margin: auto;
 }
 
-.navbar a {
+.nav_menu a {
     float: left;
     display: block;
     color: #f2f2f2;
@@ -77,8 +78,10 @@ body {
 }
 
 .navbar a:hover,
+.navbar img:hover,
 .dropdown:hover .dropbtn {
-    background-color: #67C2C6;
+    background-color: #E0FFFF;
+    color: #333;
 }
 
 .dropdown-content {
