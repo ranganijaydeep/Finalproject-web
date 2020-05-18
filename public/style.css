@@ -178,16 +178,16 @@ input[type=password] {
     color: white;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     border-radius: 15px;
     background-color: blueviolet;
 }
 
 .mtopimg img {
-    width: 100%;
+    width: 83%;
     height: 600px;
     align-items: center;
     margin-bottom: 20px;
@@ -199,8 +199,11 @@ input[type=password] {
 }
 
 .submain {
-    margin-left: 40px;
-    margin-right: 40px;
+    background-color: #F8F8FF;
+    border: 1px solid #F0FFF0;
+    padding: 30px 30px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .submain img {
