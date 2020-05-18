@@ -88,8 +88,8 @@ module.exports = (app) => {
         // geeting login from user 
     app.post('/users', (req, res) => {
         const fill = new customers({
-            Email: req.body.e_mail,
-            Password: req.body.p_assword
+            Email: req.body.email,
+            Password: req.body.password
         })
         fill.save().then(fill => {
             console.log(" login user saved");
