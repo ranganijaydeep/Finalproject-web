@@ -17,26 +17,20 @@
         <a href="/">Home</a>
         <a href="/latest_recipe">Latest recipe</a>
         <div class="dropdown">
-            <button class="dropbtn">Categories
-                <i class="fa fa-caret-down"></i>
-              </button>
+            <button class="dropbtn">Cuisine<i class="fa fa-caret-down"></i></button>
             <div class="dropdown-content">
                 <a href="#">Indian</a>
-                <a href="#">Korian</a>
+                <a href="#">Korean</a>
                 <a href="#">Brazilian</a>
-                <a href="#">Venezuala</a>
+                <a href="#">Venezualan</a>
             </div>
         </div>
-        <!--        Search bar        -->
-        <!-- Search form -->
-        <div class="md-form mt-0">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        </div>
+
 
 
 
         <div class="loginbtn">
-            <a href="/views/signup.ejs">LOGIN</a>
+            <a href=signup>SIGN UP</a>
         </div>
 
     </div>
@@ -52,10 +46,10 @@
                 <form id="myloginForm">
 
                     <label for="e_mail">Email Address</label><br/>
-                    <input type="text" name="e_mail" placeholder="Enter Email"><br/>
+                    <input type="text" name="email" placeholder="Enter Email"><br/>
                     <label for="p_word">Passsword</label><br/>
-                    <input type="password" name="p_assword" placeholder="Enter password"><br/>
-                    <button type="submit" class="waves-effect waves-light btn">Sign Up</button>
+                    <input type="p_assword" name="password" placeholder="Enter password"><br/>
+                    <button type="submit" class="waves-effect waves-light btn">Login</button>
                 </form>
             </div>
         </center>
@@ -71,12 +65,12 @@
                 data.append(pair[0], pair[1])
             }
             fetch(url, {
-                    method: "get",
+                    method: "post",
                     body: data,
 
                 }).then(res => res.json())
                 .then(res2 => {
-                    console.log(res2)
+                    console.log(res2);
                     location.reload()
                 });
         }
@@ -92,7 +86,8 @@
     <div class="footer">
 
         <div class="copyright">
-            <center><img src="../logos/mealcrewclearzip.png" alt="mealcrewlogo" />
+            <center>
+                <img src="../logos/mealcrewmain1.png" alt="mealcrewlogo" />
                 <p>&copy; 2019-2020 MealCrew</p>
             </center>
 
