@@ -128,8 +128,7 @@ body {
 }
 
 .div_main_form {
-    margin-left: 200px;
-    margin-right: 200px;
+    width: 60%;
     border-radius: 5px;
     text-align: center;
     padding: 10px;
@@ -164,13 +163,12 @@ input[type=password] {
     box-sizing: border-box;
 }
 
-.signup_top_text h3 {
+.register_top_text h3 {
     text-align: center;
     color: white;
     background-color: purple;
     padding: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
+    width: 60%;
     border-radius: 4px;
 }
 
