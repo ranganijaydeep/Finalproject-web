@@ -41,7 +41,7 @@
 
 
 
-        <H1> ALL RECIPES</h1>
+        <H1> LATEST RECIPES</h1>
 
 
 
@@ -86,7 +86,11 @@
                         x = facts.ingredients.toString();
                         return `
                     <div class="all_recipe_items">
-                            
+                            <div class="recipe_image_src">
+                                <center>
+                                    <a href="${facts.URL}"><img src="${facts.URL}" alt="${facts.title}"/></a>
+                                </center>
+                            </div>
                     <div class ="_recipe_title">
                             <H3>Title :${facts.title} </h3> 
                                 <H3>${facts.cuisine}</H3>
@@ -100,7 +104,7 @@
                             <p>${facts.instructions}</p>
                     </div>
 
-					<a href="${facts.URL}">${facts.URL}</a>
+					
                     
                      </p>
                     </div> `;
