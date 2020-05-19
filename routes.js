@@ -15,6 +15,12 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true },
 
 module.exports = (app) => {
 
+    // impotritng routes
+    const recipeRoute = require('./routes/recipe');
+
+    app.use('/recipe', recipeRoute);
+
+
     //route set 
     app.get('/', (req, res) => {
         console.log()
@@ -34,42 +40,8 @@ module.exports = (app) => {
     })
 
 
-    app.get('/recipe', async(req, res) => {
-            try {
-                const rcps = await Mrecipe.find();
-                res.json(rcps);
 
 
-
-            } catch (error) {
-                res.json({ message: error });
-            }
-
-        })
-        // searching recipe according to user enter 
-    app.get('/:postId', async(req, res) => {
-
-        try {
-            const findme = await Mrecipe.findById(req.params.postid);
-            res.json(findme);
-        } catch (error) {
-            res.json({ message: error });
-        }
-    })
-
-
-    // getting recipe 
-    app.post('/recipes', (req, res) => {
-        const fill = new recipe({
-            title: req.body.title,
-            country: req.body.country,
-            category: req.body.category,
-            instructions: req.body.instructions
-        })
-        fill.save().then(fill => {
-            console.log(" recipe saved");
-        })
-    })
 
 
     // getting sign up commands
