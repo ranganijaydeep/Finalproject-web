@@ -23,7 +23,7 @@ router.get('/:recipeId', async(req, res) => {
     try {
 
         const findme = await Mrecipe.find({ cuisine: req.params.recipeId });
-        res.writableObjectMode()
+        res.json(findme);
     } catch (error) {
         res.json({ message: error });
     }
